@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center" >
+		<form method="POST" action="/product/create" id="form">
+			<div class="mb-3">
+			  <label for="label-nombre" class="form-label">Nombre:</label>
+			  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Arroz">
+			  <label for="" id="labelNombre"></label>
+			</div>
+		 	<div class="mb-3">
+			  <label for="label-descripcion" class="form-label">Descripción:</label>
+			  <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="blanco">
+			  <label for="" id="labelDescripcion"></label>
+			</div>
+			<div class="mb-3">
+			  <label for="label-precio" class="form-label">Precio: $</label>
+			  <input type="number" class="form-control" id="precio" name="precio" placeholder="100" step="0.00001">
+			  <label for="" id="labelPrecio"></label>
+			</div>
+			<div class="mb-3">
+			  <label for="label-stock" class="form-label">Stock:</label>
+			  <input type="number" class="form-control" id="stock" name="stock" placeholder="50">
+			  <label for="" id="labelStock"></label>
+			</div>
+			<div class="mb-3">
+				<label for="label-categoria" class="form-label">Categoría:</label>
+				<select name="categoria" id="categoria" class="form-control">
+					<option value="legumbres">Legumbres</option>
+					<option value="cereales">Cereales</option>
+					<option value="bebidas">Bebidas</option>
+				</select>
+				<label for="" id="labelCategoria"></label>
+			</div>
+			
+			<div class="mb-3">
+			  <label for="label-fecha-creacion" class="form-label">Fecha de creación:</label>
+			  <input type="date" class="form-control" id="fecha-creacion" name="fecha-creacion" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+			  <label for="" id="labelFechaCreacion"></label>
+			</div>
+			<div class="mb-3">
+			  <label for="label-fecha-actualizacion" class="form-label">Fecha Actualización:</label>
+			  <input type="date" class="form-control" id="fecha-actualizacion" name="fecha-actualizacion" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+			  <label for="" id="labelFechaActualizacion"></label>
+			</div>
+
+			<div class="d-flex justify-content-center">
+			    <button type="submit" class="btn btn-primary mb-3" id="btnEnviar">Enviar</button>
+			</div>
+		</form>	
+	</div>

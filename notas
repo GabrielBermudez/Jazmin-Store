@@ -1,0 +1,35 @@
+1) npm install express-generator -g (Instala las dependencias de express de manera global)
+2) express --view=ejs jazmin-store
+3) cd jazmin-store
+4) npm install
+5) DEBUG=jazmin-store:* npm start
+6) npm install nodemon --save-dev (Evita tener que parar el servidor y volver arrancar cuando se producen cambios)
+    Agregar a package.json "scripts": {
+                            "devstart": "nodemon ./bin/www"
+                          },
+7) DEBUG=jazmin-store:* npm run devstart
+8) Install MongoDB
+9) npm install mongoose --save
+	Agregar a app.js let mongoose = require('mongoose');
+					 let mongoDB = 'mongodb://localhost/red_bicicletas';
+					 mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology: true});
+					 mongoose.Promise = global.Promise;
+					 let db = mongoose.connection;
+					 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
+
+10) npm install cookie-session --save
+	Agregar a app.js var cookieSession = require('cookie-session');
+					 // server.js
+					 app.use(cookieSession({
+					   name: 'session',
+					   keys: ['keyboard cat'],
+
+					   // Cookie Options
+					   maxAge: 24 * 60 * 60 * 1000 // 24 hours
+					 }));
+
+					 app.use(function(req,res,next){
+					    res.locals.session = req.session;
+					    next();
+					 });
+	fuente: https://www.npmjs.com/package/cookie-session
