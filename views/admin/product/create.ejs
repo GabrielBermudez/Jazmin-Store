@@ -7,8 +7,12 @@
 		<h1>Crear Nuevo Producto</h1>
 	</div>
 	<div class="form">
-		<%- include('_form');%>
+		<div class="d-flex justify-content-center" >	
+			<form method="POST" action="/admin/product/create" id="form">
+				<%- include('_form'); %>
+			</form>
+		</div>
 	</div>
-	<footer><%- include('../../layout/footer');%></footer>
+	<footer><%-include('../../layout/footer');%></footer>
 </body>
 </html>
