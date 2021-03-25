@@ -18,25 +18,35 @@
 	 		<th>Estado</th>
 	 		<th>Acciones</th>
 	 	</tr>
-	 	<% var valor = 1; %>
-	 	<%for(var i = 1;i<=10;i++){%>
+
+	 	<%let aux=0; %>
+	 	<% products.forEach(function(product){ aux++; %>
+
 	 		<tr>
-	 			<td><%=i%></td>
-	 			<td>Arroz</td>
-	 			<td>Gallo Oro</td>
-	 			<td>$100</td>
-	 			<td><%=valor+=i;%></td>
-	 			<td>Cereales</td>
-	 			<td>11/03/2021</td>
-	 			<td>11/03/2021</td>
-	 			<td>Activo</td>
+	 			<td><%=aux%></td>
+	 			<td><%=product.nombre%></td>
+	 			<td><%=product.descripcion%></td>
+	 			<td><%=product.precio%></td>
+	 			<td><%=product.stock%></td>
+	 			<td><%=product.categoria%></td>
+	 			<td><%=
+	 				product.fecha_creacion.getDate()+'/'+
+	 				product.fecha_creacion.getMonth()+'/'+
+	 				product.fecha_creacion.getFullYear()
+	 				%></td>
+	 			<td><%=
+	 				product.fecha_actualizacion.getDate()+'/'+
+	 				product.fecha_actualizacion.getMonth()+'/'+
+	 				product.fecha_actualizacion.getFullYear()
+	 				%></td>
+	 			<td><%=product.estado?'Si':'No'%></td>
 	 			<td>
 	 				<button class="btn btn-success"><a href="" class="action-icons"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
-	  				<button class="btn btn-warning"><a href="" class="action-icons"><i class="fa fa-edit"></i></a></button>
-	  				<button class="btn btn-danger"><a href="" class="action-icons"><i class="fa fa-trash" ></i></a></button>
+	  				<button class="btn btn-warning"><a href="/admin/product/update/id/<%=product._id%>" class="action-icons"><i class="fa fa-edit"></i></a></button>
+	  				<button class="btn btn-danger"><a href="/admin/product/delete/id/<%=product._id%>" class="action-icons"><i class="fa fa-trash" ></i></a></button>
 	  			</td>
 	 		</tr>
-	 	<%}%>
+	 	<%});%>
 	</table>
 
 	<footer><%- include('../../layout/footer');%></footer>

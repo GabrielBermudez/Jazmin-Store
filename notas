@@ -33,3 +33,12 @@
 					    next();
 					 });
 	fuente: https://www.npmjs.com/package/cookie-session
+
+11) npm install --save sequelize (ORM para base de datos SQL)
+	https://ed.team/blog/agiliza-tu-desarrollo-en-nodejs-con-el-orm-sequelize
+
+12) # Instalar segun la base de datos a utilizar:
+	$ npm install --save pg pg-hstore
+	$ npm install --save mysql2
+	$ npm install --save sqlite3
+	$ npm install --save tedious // MSSQL
