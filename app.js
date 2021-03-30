@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cookieSession = require('cookie-session');
 var fileUpload = require('express-fileupload')
+let mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
@@ -12,8 +13,7 @@ var productRouter = require('./routes/product');
 
 var app = express();
 
-
-let mongoose = require('mongoose');
+//let mongoDB = 'mongodb://localhost/jazmin-store';
 let mongoDB = "mongodb+srv://gabrielbermudez:39237216@sakura.ticmh.mongodb.net/Jazmin-Store?retryWrites=true&w=majority";
 mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
