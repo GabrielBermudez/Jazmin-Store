@@ -9,7 +9,8 @@ let productSchema = new Schema({
 	categoria: String,
 	fecha_creacion: Date,
 	fecha_actualizacion: Date,
-	estado: Boolean,
+	disponibilidad: Boolean,
+	url: String,
 });
 
 productSchema.statics.AddProduct = function(product,callback){

@@ -8,6 +8,7 @@
 	<table class="table table-dark table-striped">
 	 	<tr>
 	 		<th>ID</th>
+	 		<th>Imagen</th>
 	 		<th>Nombre</th>
 	 		<th>Descripción</th>
 	 		<th>Precio</th>
@@ -24,6 +25,7 @@
 
 	 		<tr>
 	 			<td><%=aux%></td>
+	 			<td><img src="<%=product.url%>" alt="logo-product" id="logo-product-index"></td>
 	 			<td><%=product.nombre%></td>
 	 			<td><%=product.descripcion%></td>
 	 			<td><%=product.precio%></td>
@@ -31,15 +33,15 @@
 	 			<td><%=product.categoria%></td>
 	 			<td><%=
 	 				product.fecha_creacion.getDate()+'/'+
-	 				product.fecha_creacion.getMonth()+'/'+
+	 				(product.fecha_creacion.getMonth()+1)+'/'+
 	 				product.fecha_creacion.getFullYear()
 	 				%></td>
 	 			<td><%=
 	 				product.fecha_actualizacion.getDate()+'/'+
-	 				product.fecha_actualizacion.getMonth()+'/'+
+	 				(product.fecha_actualizacion.getMonth()+1)+'/'+
 	 				product.fecha_actualizacion.getFullYear()
 	 				%></td>
-	 			<td><%=product.estado?'Si':'No'%></td>
+	 			<td><%=product.disponibilidad?'Si':'No'%></td>
 	 			<td>
 	 				<button class="btn btn-success"><a href="" class="action-icons"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
 	  				<button class="btn btn-warning"><a href="/admin/product/update/id/<%=product._id%>" class="action-icons"><i class="fa fa-edit"></i></a></button>

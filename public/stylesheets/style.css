@@ -73,3 +73,17 @@ footer .contenedor .row{
 	color:black;
 	text-decoration:none;
 }
+
+
+/************PRODUCT***************************/
+/*START INDEX*/
+#logo-product-index{
+	width: 45px;
+	border-radius: 100px;
+}
+
+.text-center #logo-product{
+	width: 200px;
+	border-radius: 200px;
+}
+/*END INDEX*/

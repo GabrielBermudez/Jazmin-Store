@@ -42,3 +42,13 @@
 	$ npm install --save mysql2
 	$ npm install --save sqlite3
 	$ npm install --save tedious // MSSQL
+
+13) npm install --save express-fileupload (Libreria para subir archivos al servidor)
+	const fileUpload = require('express-fileupload')
+	app.use(fileUpload()) o
+	app.use(fileUpload({
+    useTempFiles : true,
+    tempFileDir : '/tmp/'
+	}));
+
+14) npm install --save mv (Libreria para mover archivos)

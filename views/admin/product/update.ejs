@@ -5,11 +5,12 @@
 	<header><%- include('../../layout/header'); %></header>
 	<div class="text-center">
 		<h1>Actualizar Producto</h1>
+		<img src="<%=product.url%>" alt="logo-producto" id="logo-product">
 	</div>
 	<div class="form">
 		<div class="d-flex justify-content-center" >
-			<form method="POST" action="/admin/product/update/id/<%=product._id%>" id="form">
-				<%- include('_form'); %>
+			<form method="POST" action="/admin/product/update/id/<%=product._id%>" id="form" enctype="multipart/form-data">
+				<%- include('_form',{product: product}); %>
 			</form>
 		</div>
 	</div>
