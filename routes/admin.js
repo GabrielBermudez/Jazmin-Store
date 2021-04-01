@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
-let admin_controller = require('../controllers/AdminController');
+let admin_controller = require('../controllers/AdminController')
+let middlewares = require('./Middlewares')
 
-router.get('/index', admin_controller.action_index);
+router.route('/index')
+	.get(middlewares.isLoggedInIsAdmin,admin_controller.action_index);
+
 
 module.exports = router;
