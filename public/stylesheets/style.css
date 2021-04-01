@@ -87,3 +87,54 @@ footer .contenedor .row{
 	border-radius: 200px;
 }
 /*END INDEX*/
+
+
+/************INDEX***************************/
+/*START INDEX*/
+.titulo-carousel{
+	font-size: 40px;
+}
+.columna-producto{
+	margin: 20px 45px;
+	text-align: center;
+}
+.producto div img{
+	height: 200px;
+}
+
+#hay-stock{
+	color:green;
+}
+
+#no-hay-stock{
+	color:red;
+}
+/*END INDEX*/
+
+/*********************REGISTER***************************/
+/*START INDEX*/
+#register-index-body{
+	background-color: #edf0f5;
+}
+
+#register-index-form{
+	border: 1px solid black; 
+	border-radius: 1px; 
+	background-color: white;
+	width: 600px;
+}
+/*END INDEX*/
+
+/*********************LOGIN***************************/
+/*START INDEX*/
+#login-index-body{
+	background-color: #edf0f5;
+}
+
+#login-index-form{
+	border: 1px solid black; 
+	border-radius: 1px; 
+	background-color: white;
+	width: 600px;
+}
+/*END INDEX*/

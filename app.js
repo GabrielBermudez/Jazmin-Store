@@ -5,15 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cookieSession = require('cookie-session');
 var fileUpload = require('express-fileupload')
+let mongoose = require('mongoose');
 
-var indexRouter = require('./routes/index');
-var adminRouter = require('./routes/admin');
-var productRouter = require('./routes/product');
+var indexRouter = require('./routes/index')
+var adminRouter = require('./routes/admin')
+var productRouter = require('./routes/product')
+let registerRouter = require('./routes/register')
+let loginRouter = require('./routes/login')
 
 var app = express();
 
-
-let mongoose = require('mongoose');
+//let mongoDB = 'mongodb://localhost/jazmin-store';
 let mongoDB = "mongodb+srv://gabrielbermudez:39237216@sakura.ticmh.mongodb.net/Jazmin-Store?retryWrites=true&w=majority";
 mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
@@ -50,9 +52,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/admin', adminRouter);
-app.use('/admin/product', productRouter);
+app.use('/', indexRouter)
+app.use('/admin', adminRouter)
+app.use('/admin/product', productRouter)
+app.use('/register', registerRouter)
+app.use('/login', loginRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

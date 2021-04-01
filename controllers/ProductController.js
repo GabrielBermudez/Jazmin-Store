@@ -55,7 +55,7 @@ exports.product_create = function(req, res) {
 		disponibilidad: req.body.disponibilidad,
         url: `/images/${req.body.categoria}/${req.files.image.name}`,
 	});
-    console.log(product,date);
+
 	Product.AddProduct(product,function(err){
 		if(err){
 			return next(err);
