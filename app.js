@@ -12,6 +12,7 @@ var adminRouter = require('./routes/admin')
 var productRouter = require('./routes/product')
 let registerRouter = require('./routes/register')
 let loginRouter = require('./routes/login')
+let contactRouter = require('./routes/contact')
 
 var app = express();
 
@@ -33,7 +34,7 @@ app.use(cookieSession({
   keys: ['keyboard cat'],
 
   // Cookie Options
-  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  maxAge: 24 * 60 * 60 * 125 // 3 hours
 }));
 
 app.use(function(req,res,next){
@@ -57,6 +58,7 @@ app.use('/admin', adminRouter)
 app.use('/admin/product', productRouter)
 app.use('/register', registerRouter)
 app.use('/login', loginRouter)
+app.use('/contact', contactRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

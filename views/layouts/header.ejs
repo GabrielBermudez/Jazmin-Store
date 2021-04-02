@@ -14,24 +14,24 @@
           <a class="nav-link active" aria-current="page" href="/">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Contact</a>
+          <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
         </li>
       </ul>
     </div>
     <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success btn-header" type="submit">Search</button>
     </form>
     <ul class="navbar-nav">
       <% if(!session.user){ %>
           <span class="button-register-login">
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-success" href="/login/index">Login</a>
+              <a class="nav-link btn btn-outline-success btn-header" href="/login/index">Login</a>
             </li>
           </span>
           <span class="button-register-login">
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-success" href="/register/create">Register</a>
+              <a class="nav-link btn btn-outline-success btn-header" href="/register/create">Register</a>
             </li>
           </span>
         <% }else{ %>

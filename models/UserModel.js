@@ -30,12 +30,25 @@ userSchema.statics.FindUserByDNI = function(dni,callback){
 	return this.findOne({ dni:dni },callback);
 };
 
+userSchema.statics.FindUserByID = function(id,callback){
+	return this.findOne({ _id:id },callback);
+};
+
 userSchema.statics.FindUserByCorreo = function(correo,password,callback){
 	return this.findOne({correo:correo,password:password},callback);
 };
 
+userSchema.statics.FindUserByEmail = function(correo,callback){
+	return this.findOne({correo:correo},callback);
+};
+
+
 userSchema.statics.RemoveUserByDNI = function(dni, callback){
 	return this.deleteOne({ dni:dni },callback);
 };
+
+userSchema.statics.UpdateUser = function(user, callback){
+	return user.save()
+}
 
 module.exports = mongoose.model('users',userSchema);
