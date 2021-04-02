@@ -54,5 +54,7 @@
 14) npm install --save mv (Libreria para mover archivos)
 
 15) npm install -g heroku (Instalacion de command line heroku)
+	-heroku login
+	-heroku logs --tail --app testing-jazmin-store
 
 16) npm install --save mercadopago
