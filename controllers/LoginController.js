@@ -46,7 +46,7 @@ exports.reset_password = (req,res,next) =>{
            service: 'gmail',
            auth: {
                user: 'sakuradevcode@gmail.com',
-               pass: '39237216'
+               pass: 'hbgoavrbflountwy'
            }
         })
         const hosty = req.headers.host;
