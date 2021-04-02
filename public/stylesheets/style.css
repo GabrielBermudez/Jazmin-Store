@@ -33,6 +33,10 @@ header .background-image img{
     height: 40vh;
 }
 
+header .btn-header{
+	margin-right: 15px;
+}
+
 
 footer .contenedor{
 	background-color: black;
@@ -111,3 +115,34 @@ footer .contenedor .row{
 }
 /*END INDEX*/
 
+/*********************REGISTER***************************/
+/*START INDEX*/
+#register-index-body{
+	background-color: #edf0f5;
+}
+
+#register-index-form{
+	border: 1px solid black; 
+	border-radius: 1px; 
+	background-color: white;
+	width: 600px;
+}
+/*END INDEX*/
+
+/*********************LOGIN***************************/
+/*START INDEX*/
+#login-index-body{
+	background-color: #edf0f5;
+}
+
+#login-index-form{
+	border: 1px solid black; 
+	border-radius: 1px; 
+	background-color: white;
+	width: 600px;
+}
+
+.link-reset-password{
+	text-decoration-line: none;
+}
+/*END INDEX*/

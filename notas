@@ -58,3 +58,7 @@
 	-heroku logs --tail --app testing-jazmin-store
 
 16) npm install --save mercadopago
+
+17) npm install --save nodemailer (Servicio de mensajeria)
+
+18) npm install jsonwebtoken --save (Generador de Json Web Token JWT)

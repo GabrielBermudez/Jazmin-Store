@@ -7,9 +7,12 @@ var cookieSession = require('cookie-session');
 var fileUpload = require('express-fileupload')
 let mongoose = require('mongoose');
 
-var indexRouter = require('./routes/index');
-var adminRouter = require('./routes/admin');
-var productRouter = require('./routes/product');
+var indexRouter = require('./routes/index')
+var adminRouter = require('./routes/admin')
+var productRouter = require('./routes/product')
+let registerRouter = require('./routes/register')
+let loginRouter = require('./routes/login')
+let contactRouter = require('./routes/contact')
 
 var app = express();
 
@@ -31,7 +34,7 @@ app.use(cookieSession({
   keys: ['keyboard cat'],
 
   // Cookie Options
-  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  maxAge: 24 * 60 * 60 * 125 // 3 hours
 }));
 
 app.use(function(req,res,next){
@@ -50,9 +53,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/admin', adminRouter);
-app.use('/admin/product', productRouter);
+app.use('/', indexRouter)
+app.use('/admin', adminRouter)
+app.use('/admin/product', productRouter)
+app.use('/register', registerRouter)
+app.use('/login', loginRouter)
+app.use('/contact', contactRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
