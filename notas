@@ -62,3 +62,9 @@
 17) npm install --save nodemailer (Servicio de mensajeria)
 
 18) npm install jsonwebtoken --save (Generador de Json Web Token JWT)
+
+19) npm install --save passport (Social Authentication package for Node.js)
+	const passport = require('passport');
+	var userProfile;
+
+20) npm install --save passport-google-oauth (Google authentication module by Passport.js)
